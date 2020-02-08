@@ -1,0 +1,11 @@
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+<div id="footer">
+  <div class="d-flex flex-row">
+    <div class="p-2 flex-grow-1">
+      <form>
+        <div class="form-group">
+          <input
+            type="text"
+            id="chat"
+            name="chat"
+            [(ngModel)]="chat"
+            class="form-control"
+          />
+        </div>
+        <div>{{ chat }}</div>
+      </form>
+    </div>
+
+    <div class="p-2">
+      <button
+        [ngx-scroll-to]="destinationRef"
+        class="btn btn-primary"
+        (click)="addItems(chat)"
+      >
+        送信
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.content {
+  margin-top: 100px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.form-group {
+  width: 100%;
+  height: 100%;
+}
+
+#entryButton {
+  margin-top: 0px;
+}

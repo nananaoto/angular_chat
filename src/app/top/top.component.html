@@ -1,0 +1,22 @@
+<div class="content">
+  <p>ユーザーネーム</p>
+  <form>
+    <div class="form-group">
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        [(ngModel)]="userName"
+        class="form-control"
+      />
+    </div>
+  </form>
+  <button
+    id="entryButton"
+    type="button"
+    class="btn btn-secondary"
+    (click)="resisterName()"
+  >
+    入室
+  </button>
+</div>

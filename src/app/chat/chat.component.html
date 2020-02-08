@@ -1,0 +1,56 @@
+<div class="container">
+  <table id="comments" class="comments">
+    <div *ngFor="let item of (items | async); let l = last">
+      <div class="media">
+        <div class="media-left">
+          <a href="#" class="icon-rounded">{{ item.initial }}</a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ item.name }}</h4>
+          <div class="chat-comment">{{ item.comment }}</div>
+          <img *ngIf="item.img" src="{{ item.img }}" />
+        </div>
+      </div>
+    </div>
+    <div id="destination" #destinationRef></div>
+  </table>
+
+  <div id="footer">
+    <div class="d-flex flex-row">
+      <div class="p-2 flex-grow-1">
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              id="chat"
+              name="chat"
+              [(ngModel)]="chat"
+              class="form-control"
+              #input
+              (keyup.enter)="addItems()"
+            />
+          </div>
+          <div>{{ chat }}</div>
+        </form>
+      </div>
+
+      <div class="p-2">
+        <button class="btn btn-primary" (click)="addItems()">
+          送信
+        </button>
+      </div>
+
+      <!--
+      <div class="p-2">
+        <button
+          id="buttonGurunavi"
+          [ngx-scroll-to]="destinationRef"
+          class="btn btn-primary"
+          (click)="gurunaviButton()"
+        >
+          ぐるなび
+        </button>
+      </div>
+    --></div>
+  </div>
+</div>
